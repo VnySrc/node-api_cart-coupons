@@ -1,27 +1,31 @@
 # node_ts-react-api_loja_integrada
-Projeto com o Backend ultilizando uma Api própria de Carrinho de Compras, Produtos e Cupons,  integrada à um Frontend Desenvolvido em React
-**Product Routes**
-***router.get("/products", productController.getAllProducts)***<br />
-Get Products List
-***router.post("/products", productController.addProduct)***<br />
-Crate new product
-***router.get("/products/:id", productController.findOneProductById)***<br />
-Get one product by id
-***router.put("/products/:id", productController.editProduct)***<br />
-Edit Pproduct by id
-***router.delete("products/:id", productController.deleteProduct)***<br />
-Delete product by id
+*Projeto com o Backend desenvolvimento de Api de Carrinho de Compras com Crud de Produtosn Cupons e Calculo de Descontos Baseado nos Cupons Ultilizados no Carrinho.*
+<br />
+**RESTful** <br />
+**MVC** <br />
+
+**Product Routes** <br />
+***router.get("/products", productController.getAllProducts)*** <br />
+Get Products List <br />
+***router.post("/products", productController.addProduct)*** <br />
+Crate new product <br />
+***router.get("/products/:id", productController.findOneProductById)*** <br />
+Get one product by id <br />
+***router.put("/products/:id", productController.editProduct)*** <br />
+Edit Pproduct by id <br />
+***router.delete("products/:id", productController.deleteProduct)*** <br />
+Delete product by id <br />
 
 **Cart Routes** <br />
-***router.get("/carts", cartController.getAllCarts)***<br />
-Get carts list
-***router.post("/carts", cartController.addNewCart)***<br />
-Create new cart
-***router.get("/carts/products", cartController.findOneCartBySessionId)***<br />
-Get one cart by id
-***router.post("/carts/products", cartController.addCartItem)***<br />
-Add Product to cart
-***router.put("/carts/products", cartController.editCartItem)***<br />
-Edit on cart product by id 
-***router.delete("/carts/products", cartController.deleteCartItem)***<br />
-Delete cart product by id
+***router.get("/carts", cartController.getAllCarts)*** <br />
+Get carts list <br />
+***router.post("/carts", cartController.addNewCart)*** <br />
+Create new cart <br />
+***router.get("/carts/products", cartController.findOneCartBySessionId)*** <br />
+Get one cart by id <br />
+***router.post("/carts/products", cartController.addCartItem)*** <br />
+Add Product to cart <br />
+***router.put("/carts/products", cartController.editCartItem)*** <br />
+Edit on cart product by id <br />
+***router.delete("/carts/products", cartController.deleteCartItem)*** <br />
+Delete cart product by id <br />
