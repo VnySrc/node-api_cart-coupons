@@ -4,6 +4,11 @@
 **RESTful** <br />
 **MVC** <br />
 
+*API Documentation*
+Link: https://documenter.getpostman.com/view/20194488/UyxojQMa
+
+
+
 **Product Routes** <br />
 ***router.get("/products", productController.getAllProducts)*** <br />
 Get Products List <br />
