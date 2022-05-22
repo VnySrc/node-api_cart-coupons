@@ -1,14 +1,15 @@
 {
-  "name": "api_loja",
+  "name": "api_cart-coupons",
   "version": "1.0.0",
   "description": "",
   "main": "server.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/server"
+    "dev": "nodemon src/server",
+    "start": "tsc & node dist/src/server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "VnySrc",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.1",
