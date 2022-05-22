@@ -1,0 +1,30 @@
+{
+  "name": "api_loja",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "mysql2": "^2.3.3",
+    "pg": "^8.7.3",
+    "remove": "^0.1.5",
+    "sequelize": "^6.19.0",
+    "sequelize-cli": "^6.4.1",
+    "ts-node": "^10.7.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/express-session": "^1.17.4",
+    "@types/node": "^17.0.33",
+    "@types/sequelize": "^4.28.13"
+  }
+}
