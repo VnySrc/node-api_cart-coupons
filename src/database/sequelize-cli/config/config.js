@@ -18,7 +18,8 @@ module.exports = {
   },
   "production": {
     "url": process.env.DATABASE_URL,
-    "ssl": true, 
-    "dialect": "postgres",
+     "ssl": true, 
+     "extra": { "ssl": { "rejectUnauthorized": false }},
+      "dialect": "postgres", 
   }
 }
