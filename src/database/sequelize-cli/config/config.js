@@ -21,6 +21,6 @@ module.exports = {
     "password": process.env.POSTGRES_PRODUCTION_PWD,
     "database": process.env.POSTGRES_PRODUCTION_DB,
     "host": process.env.POSTGRES_PRODUCTION_HOST,
-    "dialect": "postgres",
     "ssl": { "rejectUnauthorized": false }},
+    "dialect": "postgres",
   }
