@@ -16,6 +16,6 @@ app.use(productRoutes)
 app.use(cartRoutes)
 
 
-server.listen(process.env.SERVER_PORT | 3000 , () => {
-    console.log(`Servidor Iniciado Porta: ${process.env.SERVER_PORT | 3000}`)
+server.listen(process.env.PORT, () => {
+    console.log(`Servidor Iniciado Porta: ${process.env.SERVER_PORT}`)
 }) 
