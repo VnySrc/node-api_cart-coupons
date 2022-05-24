@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/server",
-    "postinstall": "npm run tsc && npx sequelize-cli db:migrate ",
+    "tsc": " tsc",
+    "postinstall": "npx sequelize-cli db:migrate ",
     "start": "node dist/server.js"
   },
   "keywords": [],
