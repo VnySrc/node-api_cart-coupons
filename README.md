@@ -39,6 +39,19 @@ Edit Pproduct by id <br />
 ***router.delete("products/:id", productController.deleteProduct)*** <br />
 Delete product by id <br />
 
+**Coupons Routes**<br />
+router.get("/coupons", productController.getAllProducts)<br />
+Get coupons List<br />
+router.post("/coupons", productController.addProduct)<br />
+Crate new coupon<br />
+router.get("/coupons/:slug", productController.findOneProductById)<br />
+Get one coupon by tag<br />
+router.put("/coupons/:slug", productController.editProduct)<br />
+Edit coupon by tag<br />
+router.delete("coupons/:slug", productController.deleteProduct)<br />
+Delete coupon by tag<br />
+
+
 **Cart Routes** <br />
 ***router.get("/carts", cartController.getAllCarts)*** <br />
 Get carts list <br />
