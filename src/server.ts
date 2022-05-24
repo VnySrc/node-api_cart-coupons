@@ -15,7 +15,6 @@ app.use(express.json())
 app.use(productRoutes)
 app.use(cartRoutes)
 
-
 server.listen(process.env.PORT, () => {
     console.log(`Servidor Iniciado Porta: ${process.env.SERVER_PORT}`)
 }) 
