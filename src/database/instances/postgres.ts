@@ -1,16 +1,16 @@
 import { Sequelize } from "sequelize"
 import dotenv from "dotenv"
-
+import  db  from "../helpers/databaseHelper"
 dotenv.config()
 
 export const postgres = new Sequelize(
-    process.env.POSTGRES_DB as string,
-    process.env.POSTGRES_USER as string,
-    process.env.POSTGRES_PWD as string,
+    db.db as string,
+    db.user as string,
+    db.pwd as string,
 
     {
         dialect: "postgres",
-        host: process.env.PROSTGRES_HOST,
-        port: parseInt(process.env.POSTGRES_PORT as string),
+        host: db.host,
+        port: parseInt(db.port as string),
     }
 )

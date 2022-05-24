@@ -4,6 +4,7 @@ import dotenv from "dotenv"
 import productRoutes from "./routes/productRoutes"
 import cartRoutes from "./routes/cartRoutes"
 import session from "express-session"
+import { postgres } from "./database/instances/postgres"
 
 dotenv.config()
 
@@ -16,5 +17,6 @@ app.use(productRoutes)
 app.use(cartRoutes)
 
 server.listen(process.env.PORT, () => {
+    postgres.sync()
     console.log(`Servidor Iniciado Porta: ${process.env.SERVER_PORT}`)
 }) 
