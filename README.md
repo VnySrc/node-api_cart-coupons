@@ -4,9 +4,13 @@
 **RESTful** <br />
 **MVC** <br />
 
+**Install** <br />
+npm install<br />
+*** Run Migrations ***<br />
+npx sequelize-cli db:migrate
+
 ***API Documentation***<br />
 **Link:** https://documenter.getpostman.com/view/20194488/UyxojQMa<br />
-
 
 
 **Product Routes** <br />
