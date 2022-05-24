@@ -8,14 +8,14 @@
 npm install<br />
 
 ***Create .env***<br />
-PORT=3000
-SESSION_SECRET_KEY= sua key aleatoria
+PORT=3000<br />
+SESSION_SECRET_KEY= sua key aleatoria<br />
 
-POSTGRES_DB=apiloja
-POSTGRES_USER= seu user
-POSTGRES_PWD= sua password
-POSTGRES_PORT=5432
-POSTGRES_HOST=127.0.0.1
+POSTGRES_DB=apiloja<br />
+POSTGRES_USER= seu user<br />
+POSTGRES_PWD= sua password<br />
+POSTGRES_PORT=5432<br />
+POSTGRES_HOST=127.0.0.1<br />
 
 ***Run Migrations***<br />
 npx sequelize-cli db:migrate
