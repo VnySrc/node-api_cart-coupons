@@ -1,5 +1,5 @@
 {
-  "name": "api_loja",
+  "name": "api_cart-coupons",
   "version": "1.0.0",
   "description": "",
   "main": "server.ts",
@@ -11,7 +11,7 @@
     "start": "node dist/server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "VnySrc",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.1",
