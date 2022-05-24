@@ -12,5 +12,6 @@ export const postgres = new Sequelize(
         dialect: "postgres",
         host: db.host,
         port: parseInt(db.port as string),
+        ssl: db.ssl,
     }
 )

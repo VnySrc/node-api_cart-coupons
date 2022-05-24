@@ -18,5 +18,5 @@ app.use(cartRoutes)
 
 server.listen(process.env.PORT, () => {
     postgres.sync()
-    console.log(`Servidor Iniciado Porta: ${process.env.SERVER_PORT}`)
+    console.log(`Servidor Iniciado Porta: ${process.env.PORT}`)
 }) 
