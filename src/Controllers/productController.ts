@@ -1,39 +1,42 @@
 import { Product } from "../models/Product"
-import { Request, Response } from "express"
+import { Request, response, Response } from "express"
+import { ProductServices } from "../services/productServices"
 
 export const getAllProducts = async (req: Request, res: Response) => {
-    const response = await Product.findAll()
+    const response = await ProductServices.getAllProductsService()
     res.json(response)
 }
 
 export const addProduct = async (req: Request, res: Response) => {
     const {name, price, stock} = req.body
     if (name && price && stock) {
-        const response = Product.build({
-            name,
-            price,
-            stock,
-        })
-        await response.save()
+        const response = await ProductServices.addProductService(name, price, stock)
 
-        res.status(200)
-        res.json(response)
+        if (response instanceof Error) {
+            res.json({error: response})
+        }
+        else {
+            res.json({newProduct: response})
+        }
     }
     else{
-        res.status(400)
-        res.json({status: "Parametros Incorretos"})
+        res.status(404)
     }
 }
 
 export const findOneProductById = async (req: Request, res: Response) => {
     const id = req.params.id
     if (id) {
-        const response = await Product.findByPk(id)
-        res.json({response})
+        const response = await ProductServices.findOneProductByIdService(id)
+        if (response instanceof Error) { 
+            res.json({error: response})
+        }
+        else {
+            res.json({product: response})
+        }     
     }
     else{
         res.status(404)
-        res.json({status: "id de produto invalido"})
     }
    
 }
@@ -41,26 +44,32 @@ export const findOneProductById = async (req: Request, res: Response) => {
 export const editProduct = async (req: Request, res: Response) => {
     const id = req.params.id
     const {name,price,stock} = req.body
-    const response = await Product.findOne({where:{id:id}})
-    if (response) {
-        response.name = name
-        response.price = price
-        response.stock = stock
-        
-        await response.save()
-
-        res.status(200)
-        res.json(response)
+    if (name && price && stock) {
+        const reponse = ProductServices.editProductService(id, name, price, stock)
+        if (response instanceof Error) {
+            res.json({error: reponse})
+        }
+        else {
+            res.json({product: reponse})
+        }
     }
     else {
         res.status(404)
-        res.json({status: "id de produto invalido"})
     }
-   
 }
 
 export const deleteProduct = async (req: Request, res: Response) => {
     const id = req.params.id
-    const response = await Product.findAll({where: {id: id}})
-    response? res.json({status: "Produto Removido"}) : res.json({status: "id de produto invalido"})
+    if (id) {
+        const response = await ProductServices.deleteProductService(id)
+        if (response instanceof Error) {
+            res.json({error: response})
+        }
+        else {
+            res.json({product: response})
+        }
+    }
+    else {
+        res.status(404)
+    }
 }
