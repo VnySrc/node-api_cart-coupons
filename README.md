@@ -21,7 +21,7 @@ POSTGRES_HOST=127.0.0.1<br />
 npx sequelize-cli db:migrate
 
 ***Run Api***<br />
-npm run dev <br /
+npm run dev <br />
 
 ***API Documentation***<br />
 **Link:** https://documenter.getpostman.com/view/20194488/UyxojQMa<br />
